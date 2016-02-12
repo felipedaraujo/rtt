@@ -1,0 +1,21 @@
+<ion-pane ng-init="init()">
+  <ion-header-bar>
+  </ion-header-bar>
+
+  <ion-content class="padding text-center">
+    <p>{{instruction.message}}</p>
+    <button class="block button button-stable"
+         ng-repeat="figure in figures"
+         ng-style="{color:figure.color}"
+         ng-include="setIcon(figure)"
+         ng-click="answer(figure)">
+    </button>
+  </ion-content>
+
+  <ion-footer-bar>
+    <div class="button-bar">
+      <button class="button button-icon icon-left ion-checkmark-round">{{corrects}}</button>
+      <button class="button button-icon icon-left ion-close-round">{{wrongs}}</button>
+    </div>
+  </ion-footer-bar>
+</ion-pane>
