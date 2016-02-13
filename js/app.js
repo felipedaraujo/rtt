@@ -5,7 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 var starter = angular.module('starter', ['ionic', 'starter.controllers'])
 
-angular.module('starter.controllers', [])
+angular.module('starter.services', [])
+
+angular.module('starter.controllers', ['starter.services'])
 
 starter.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -31,10 +33,10 @@ starter.config(function($stateProvider, $urlRouterProvider) {
       url: '/home',
       templateUrl: 'templates/home.html',
     }).
-    state('play', {
-      url: '/play',
-      templateUrl: 'templates/play.html',
-      controller: 'PlayCtrl'
+    state('rtt', {
+      url: '/rtt',
+      templateUrl: 'templates/rtt.html',
+      controller: 'RTTCtrl'
     });
   $urlRouterProvider.otherwise('/home');
 });
