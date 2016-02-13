@@ -1,4 +1,19 @@
 /* Empty. Add your own CSS if you like */
+.home.scroll-content,
+.start-test.scroll-content,
+.end-test.scroll-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.home .scroll,
+.start-test .scroll,
+.end-test .scroll {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
 
 .block {
   width: 20%;
@@ -7,12 +22,16 @@
   vertical-align: top;
 }
 
-.block.button {
-  line-height: normal;
-}
-
-svg {
-  fill: currentColor;
+.figure {
   width: 40px;
   height: 40px;
+  border: 1px solid black;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.small {
+  transform: scale(0.5);
 }
