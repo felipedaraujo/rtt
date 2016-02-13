@@ -1,0 +1,16 @@
+<ion-pane ng-init="init()">
+  <ion-content class="padding has-header text-center">
+    <div class="card">
+      <div class="item item-text-wrap">
+        {{instruction.message}}
+      </div>
+    </div>
+    <button class="block button button-stable"
+            ng-repeat="figure in figures"
+            ng-click="answer(figure)">
+      <div class="figure {{figure.size}} {{figure.shape}}"
+           ng-style="{'background-color':figure.color}">
+      </div>
+    </button>
+  </ion-content>
+</ion-pane>
